@@ -1,0 +1,107 @@
+/* Umumiy dizayn */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffb6c1, #ff4d6d);
+  color: #fff;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid #fff;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Galereya */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* yumaloq burchak */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+footer {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid #fff;
+  font-size: 1.2em;
+}
+.intro-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.intro-video video {
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.love-intro {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.love-intro h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.love-intro p {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+.heart {
+  position: fixed;
+  bottom: 0;
+  background-image: url('images/love11.png'); /* yurakcha stiker faylingni qo‘y */
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  animation: floatUp 6s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.8); opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .love-intro {
+    font-size: 1em;
+    padding: 20px;
+  }
+}
